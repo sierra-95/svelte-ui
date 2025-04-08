@@ -1,0 +1,37 @@
+{
+  "name": "@sierra-95/svelte-ui",
+  "version": "1.0.0",
+  "description": "A library of reusable Svelte components",
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.esm.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sierra-95/svelte-ui.git"
+  },
+  "keywords": [
+    "svelte",
+    "components",
+    "button",
+    "library"
+  ],
+  "author": "Michael Machohi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sierra-95/svelte-ui/issues"
+  },
+  "homepage": "https://github.com/sierra-95/svelte-ui#readme",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "autoprefixer": "^10.4.21",
+    "rollup": "^2.79.2",
+    "rollup-plugin-svelte": "^7.2.2",
+    "svelte": "^5.25.8"
+  },
+  "dependencies": {
+    "rollup-plugin-css-only": "^4.5.2"
+  }
+}
