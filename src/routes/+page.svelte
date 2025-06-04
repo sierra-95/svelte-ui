@@ -1,5 +1,7 @@
 <script lang="ts">
-	import {YouTube} from '$lib/index.js'
-	
+	import {LinearProgress, CircularProgress,Button} from '$lib/index.js'
 </script>
-<YouTube uid="gouiY85kD2o" title="Renegade - Kevin Olusola" />
+
+<LinearProgress/>
+<CircularProgress/>
+<Button externalClass='ml-2'>Button</Button>
