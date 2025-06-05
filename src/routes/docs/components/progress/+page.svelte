@@ -1,1 +1,7 @@
-<h1>hello</h1>
+<script lang="ts">
+	import {LinearProgress, CircularProgress} from '$lib/index.js'
+
+</script>
+
+<LinearProgress/>
+<CircularProgress/>

@@ -25,7 +25,7 @@
         }
     });
     function toggleComponentMenu() {
-        if (currentPath !== routes.components) {
+        if (!currentPath.startsWith(routes.components)) {
             window.location.href = routes.components;
             return;
         }

@@ -10,6 +10,12 @@
 
 	const isActiveExact = (/** @type {string} */ path) => currentPath === path;
 	const isActiveStartsWith = (/** @type {string} */ path) => currentPath.startsWith(path);
+
+	function toggleComponentMenu() {
+		if (!currentPath.startsWith(routes.components)) {
+			window.location.href = routes.components;
+		}
+    }
 </script>
 
 <style>
@@ -37,7 +43,7 @@
 	<a href={routes.introduction} aria-label="button" class="icon-base {isActiveExact(routes.introduction) ? 'icon-active' : ''}">
 		<i class="fa-solid fa-house text-[2.5rem] text-[#002B67]"></i>
 	</a>
-	<a href={routes.components} aria-label="button" class="icon-base {isActiveStartsWith(routes.components) ? 'icon-active' : ''}">
+	<button aria-label="none" on:click={toggleComponentMenu} class="icon-base {isActiveStartsWith(routes.components) ? 'icon-active' : ''}">
 		<i class="fa-solid fa-box text-[2.5rem] text-[#002B67]"></i>
-	</a>
+	</button>
 </div>
