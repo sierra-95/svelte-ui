@@ -1,0 +1,41 @@
+.icon-base {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+.icon-active {
+    background-color: rgb(236, 244, 255);
+    border-left: 1px solid rgb(185, 214, 255);
+    border-top: 1px solid rgb(185, 214, 255);
+    border-bottom: 1px solid rgb(185, 214, 255);
+}
+a:hover{
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+a:active{color: #002B67;}
+.caret {
+    transition: transform 0.3s ease;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+.submenu {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.submenu.closed {
+    max-height: 0;
+}
+
+.submenu.open {
+    max-height: auto;
+}

@@ -1,5 +1,6 @@
 <script>
     import { page } from '$app/stores';
+    import { onMount } from 'svelte';
 
     $: currentPath = $page.url.pathname;
 
@@ -15,27 +16,24 @@
 
 	const isActiveExact = (/** @type {string} */ path) => currentPath === path;
 	const isActiveStartsWith = (/** @type {string} */ path) => currentPath.startsWith(path);
+
+    let isComponentMenuOpen = false;
+
+    onMount(() => {
+        if (currentPath === routes.components) {
+            isComponentMenuOpen = true;
+        }
+    });
+    function toggleComponentMenu() {
+        if (currentPath !== routes.components) {
+            window.location.href = routes.components;
+            return;
+        }
+        isComponentMenuOpen = !isComponentMenuOpen;
+    }
 </script>
 <style>
-	.icon-base {
-		display: flex;
-		justify-content: center;
-        align-items: center;
-		padding: 10px 0px;
-        border-top-left-radius: 40px;
-        border-bottom-left-radius: 40px;
-	}
-	.icon-active {
-		background-color: rgb(236, 244, 255);
-        border-left: 1px solid rgb(185, 214, 255);
-        border-top: 1px solid rgb(185, 214, 255);
-        border-bottom: 1px solid rgb(185, 214, 255);
-	}
-    a:hover{
-        text-decoration: underline;
-        transition: color 0.2s ease;
-    }
-    a:active{color: #002B67;}
+    @import './menu.css';
 </style>
 <div class="swiper-slide menu border-r-1 border-gray-300">
     <div class="w-full h-[70px]"></div>
@@ -43,13 +41,18 @@
         <!--Dont change pt-5-->
         <div class="w-[95%] icon-base {isActiveExact(routes.introduction) ? 'icon-active' : ''}">
             <i class="fa-solid fa-house text-[2.5rem] text-[#002B67]"></i>
-            <a href={routes.introduction} class="ml-2">Introduction</a>
+            <a href={routes.introduction} class="ml-2">Get Started</a>
         </div>
         <nav class="w-[95%]">
             <div class="icon-base {isActiveStartsWith(routes.components) ? 'icon-active' : ''}"><i class="fa-solid fa-box text-[2.5rem] text-[#002B67]"></i>
-            <a href={routes.components} class="ml-3">Components</a></div>
+            <button on:click={toggleComponentMenu} class="ml-3 cursor-pointer hover:underline">
+                Components
+                <span class="caret {isComponentMenuOpen ? 'rotate' : ''}">›</span>
+            </button></div>
             <div class="flex justify-end">
-                <ul class="flex flex-col gap-2 items-start w-[50%] mt-2">
+                <ul 
+                class="flex flex-col gap-2 items-start w-[50%] mt-2 submenu 
+                {isComponentMenuOpen ? 'open' : 'closed'}">
                 {#each componentLinks as link}
                     <a
                     href={link.path}
