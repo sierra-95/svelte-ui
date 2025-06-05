@@ -35,9 +35,7 @@
         text-decoration: underline;
         transition: color 0.2s ease;
     }
-    a:active{
-        color: red;
-    }
+    a:active{color: #002B67;}
 </style>
 <div class="swiper-slide menu border-r-1 border-gray-300">
     <div class="w-full h-[70px]"></div>
