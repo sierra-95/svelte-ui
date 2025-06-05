@@ -4,12 +4,12 @@
 	$: currentPath = $page.url.pathname;
 	
 	const routes = {
-		home: '/docs',
-		map: '/dashboard/maps',
-		settings: '/dashboard/settings'
+		introduction: '/docs',
+		components: '/docs/components',
 	};
 
-	const isActive = (/** @type {string} */ path) => currentPath.startsWith(path);
+	const isActiveExact = (/** @type {string} */ path) => currentPath === path;
+	const isActiveStartsWith = (/** @type {string} */ path) => currentPath.startsWith(path);
 </script>
 
 <style>
@@ -34,7 +34,10 @@
 
 <div id="sidebar" class="w-[70px] flex flex-col gap-3 items-center pt-5 border-r-1 border-gray-300">
 	<!--Dont change pt-5-->
-	<a href={routes.home} aria-label="button" class="icon-base {isActive(routes.home) ? 'icon-active' : ''}">
+	<a href={routes.introduction} aria-label="button" class="icon-base {isActiveExact(routes.introduction) ? 'icon-active' : ''}">
 		<i class="fa-solid fa-house text-[2.5rem] text-[#002B67]"></i>
+	</a>
+	<a href={routes.components} aria-label="button" class="icon-base {isActiveStartsWith(routes.components) ? 'icon-active' : ''}">
+		<i class="fa-solid fa-box text-[2.5rem] text-[#002B67]"></i>
 	</a>
 </div>
