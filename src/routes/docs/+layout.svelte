@@ -24,7 +24,7 @@
 
     swiper = new Swiper('.swiper', {
       slidesPerView: 'auto',
-      initialSlide: 1,
+      initialSlide: 0,
       resistanceRatio: 0,
       slideToClickedSlide: true,
       // allowTouchMove: false,

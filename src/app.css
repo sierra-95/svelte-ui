@@ -3,5 +3,8 @@
 @plugin '@tailwindcss/typography';
 
 .div{
+    border: 1px solid green;
+}
+.div2{
     border: 1px solid red;
 }
