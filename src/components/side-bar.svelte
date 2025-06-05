@@ -4,7 +4,7 @@
 	$: currentPath = $page.url.pathname;
 	
 	const routes = {
-		home: '/dashboard/home',
+		home: '/docs',
 		map: '/dashboard/maps',
 		settings: '/dashboard/settings'
 	};
@@ -35,6 +35,6 @@
 <div id="sidebar" class="w-[70px] flex flex-col gap-3 items-center pt-5 border-r-1 border-gray-300">
 	<!--Dont change pt-5-->
 	<a href={routes.home} aria-label="button" class="icon-base {isActive(routes.home) ? 'icon-active' : ''}">
-		<i class="fa-solid fa-house"></i>
+		<i class="fa-solid fa-house text-[2.5rem] text-[#002B67]"></i>
 	</a>
 </div>
