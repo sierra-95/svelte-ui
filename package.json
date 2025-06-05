@@ -57,5 +57,10 @@
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/sierra-95/svelte-ui.git"
+	},
+	"dependencies": {
+		"@lucide/svelte": "^0.513.0",
+		"svelte-toasts": "^1.1.2",
+		"swiper": "^11.2.8"
 	}
 }
