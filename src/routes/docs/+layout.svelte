@@ -30,16 +30,11 @@
 	}
 </style>
 
-<!-- Header -->
-<div class="w-full h-[100px] bg-gray-800 text-white flex items-center justify-between px-4">
-	<h1 class="text-xl">Header</h1>
-	<button on:click={toggleMenu} class="bg-gray-700 px-3 py-1 rounded">Toggle Menu</button>
-</div>
+<Header toggleMenu={toggleMenu}/>
 
 <!--Menu-->
 <div class="flex w-full h-[calc(100vh-100px)] overflow-hidden">
 
-	<!-- Side Menu -->
 	<div
 		class="menu-transition h-full bg-white overflow-hidden border-r-1 border-gray-300"
 		class:fixed={isMobile}
@@ -62,6 +57,7 @@
 	<div class="transition-all duration-300"
 		style={`width: ${isMobile ? '100%' : isMenuOpen ? 'calc(100vw - 300px)' : 'calc(100vw - 100px)'};`}
 	>
+		<Toast/>
 		<slot/>
 	</div>
 </div>
