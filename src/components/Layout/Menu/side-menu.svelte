@@ -1,6 +1,6 @@
 <script>
+    import { goto } from '$app/navigation';
     import { page } from '$app/stores';
-    import { onMount } from 'svelte';
     export let handleMobileSelect = () => {};
 
     $: currentPath = $page.url.pathname;
@@ -20,14 +20,18 @@
 
     let isComponentMenuOpen = false;
 
-    onMount(() => {
-        if (currentPath === routes.components) {
+    $: {
+        const path = $page.url.pathname;
+        if (path.startsWith(routes.components)) {
             isComponentMenuOpen = true;
+        } else {
+            isComponentMenuOpen = false;
         }
-    });
+    }
+
     function toggleComponentMenu() {
         if (!currentPath.startsWith(routes.components)) {
-            window.location.href = routes.components;
+            goto(routes.components);
             return;
         }
         isComponentMenuOpen = !isComponentMenuOpen;
