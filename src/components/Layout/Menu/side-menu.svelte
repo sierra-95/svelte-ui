@@ -1,5 +1,4 @@
 <script>
-    import { goto } from '$app/navigation';
     import { page } from '$app/stores';
     export let handleMobileSelect = () => {};
 
@@ -13,7 +12,6 @@
         { name: 'Button', path: '/docs/components/button' },
         { name: 'Progress', path: '/docs/components/progress' },
     ];
-
 
 	const isActiveExact = (/** @type {string} */ path) => currentPath === path;
 	const isActiveStartsWith = (/** @type {string} */ path) => currentPath.startsWith(path);
@@ -30,10 +28,6 @@
     }
 
     function toggleComponentMenu() {
-        if (!currentPath.startsWith(routes.components)) {
-            goto(routes.components);
-            return;
-        }
         isComponentMenuOpen = !isComponentMenuOpen;
     }
 </script>

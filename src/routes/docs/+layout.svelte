@@ -7,6 +7,7 @@
 
 	const updateIsMobile = () => {
 		isMobile = window.innerWidth < 768;
+		isMenuOpen = !isMobile; 
 	};
 
 	const toggleMenu = () => {
@@ -31,7 +32,7 @@
 <Header toggleMenu={toggleMenu}/>
 
 <!--Menu-->
-<div class="flex w-full h-[calc(100vh-100px)] overflow-hidden">
+<div class="flex w-full h-[calc(100vh-70px)] overflow-hidden">
 
 	<div
 		class="menu-transition h-full bg-white overflow-hidden border-r-1 border-gray-300"
@@ -52,8 +53,8 @@
 	{/if}
 
 	<!-- Content -->
-	<div class="transition-all duration-300"
-		style={`width: ${isMobile ? '100%' : isMenuOpen ? 'calc(100vw - 300px)' : 'calc(100vw - 100px)'};`}
+	<div class="transition-all duration-300 overflow-y-auto"
+		style={`width: ${isMobile ? '100%' : isMenuOpen ? 'calc(100vw - 300px)' : 'calc(100vw - 70px)'};`}
 	>
 		<Toast/>
 		<slot/>
