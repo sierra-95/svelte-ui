@@ -1,11 +1,9 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import {LinearProgress, isLoading, SiteUnderMaintenance, Toast, Modal } from '$lib/index.js';
   import Swiper, { Swiper as SwiperClass } from 'swiper';
   import { page } from '$app/stores';
-  import Header from '../../components/header.svelte';
-  import SideBar from '../../components/side-bar.svelte';
-  import SideMenu from '../../components/side-menu.svelte';
+  import {Toast, Header, SideBar, SideMenu} from '../../components/index.js';
+  import {LinearProgress, isLoading, SiteUnderMaintenance, Modal } from '$lib/index.js';
   import '../../layout.css';
   let swiper: SwiperClass;
 
