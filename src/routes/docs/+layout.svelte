@@ -37,7 +37,7 @@
 	<div
 		class="menu-transition h-full bg-white overflow-hidden border-r-1 border-gray-300"
 		class:fixed={isMobile}
-		class:top-[100px]={isMobile}
+		class:top-[70px]={isMobile}
 		class:left-0={isMobile}
 		class:z-50={isMobile}
 		style={`width: ${isMobile ? '300px' : isMenuOpen ? '300px' : '0px'}; transform: translateX(${isMobile && !isMenuOpen ? '-100%' : '0'})`}
@@ -49,7 +49,7 @@
 	</div></div>
 	
 	{#if !isMobile && !isMenuOpen}
-		<SideBar/>
+		<SideBar toggleMenu={toggleMenu}/>
 	{/if}
 
 	<!-- Content -->
