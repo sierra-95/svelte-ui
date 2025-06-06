@@ -1,6 +1,7 @@
 <script>
     import { page } from '$app/stores';
     import { onMount } from 'svelte';
+    export let handleMobileSelect = () => {};
 
     $: currentPath = $page.url.pathname;
 
@@ -39,7 +40,10 @@
     <!--Dont change pt-5-->
     <div class="w-[95%] icon-base {isActiveExact(routes.introduction) ? 'icon-active' : ''}">
         <i class="fa-solid fa-house text-[2.5rem] text-[#002B67]"></i>
-        <a href={routes.introduction} class="ml-2 w-[50%]">Get Started</a>
+        <a 
+        on:click={handleMobileSelect}
+        href={routes.introduction} 
+        class="ml-2 w-[50%]">Get Started</a>
     </div>
     <nav class="w-[95%]">
         <div class="icon-base {isActiveStartsWith(routes.components) ? 'icon-active' : ''}"><i class="fa-solid fa-box text-[2.5rem] text-[#002B67]"></i>
@@ -53,6 +57,7 @@
             {isComponentMenuOpen ? 'open' : 'closed'}">
             {#each componentLinks as link}
                 <a
+                on:click={handleMobileSelect}
                 href={link.path}
                 class={currentPath === link.path ? 'text-[#002B67] underline' : ''}
                 >

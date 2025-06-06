@@ -17,8 +17,6 @@
 		window.addEventListener('resize', updateIsMobile);
 		return () => window.removeEventListener('resize', updateIsMobile);
 	});
-
-	// auto close menu after mobile selection
 	function handleMobileSelect() {
 		if (isMobile) isMenuOpen = false;
 	}
@@ -46,7 +44,7 @@
 		class="transition-opacity duration-300 ease-in-out"
 		style={`opacity: ${isMenuOpen || isMobile ? '1' : '0'}; pointer-events: ${isMenuOpen || isMobile ? 'auto' : 'none'};`}
 		>
-		<SideMenu/>
+		<SideMenu handleMobileSelect={handleMobileSelect}/>
 	</div></div>
 	
 	{#if !isMobile && !isMenuOpen}
