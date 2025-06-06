@@ -10,7 +10,7 @@
   export let submit = false;
 
   $: buttonClasses = (() => {
-    let classes = 'btn';
+    let classes = 'base-btn';
 
     classes += ` btn-${variant}`;
 
