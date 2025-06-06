@@ -1,0 +1,78 @@
+.btn {
+  padding: 0.5rem 1rem; 
+  font-size: 1.125rem;
+  border-radius: 4px; 
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Contained Variants */
+.btn-contained {
+  color: white;
+}
+
+.btn-contained-primary {
+  background-color: #0F52BA;
+}
+
+.btn-contained-primary:hover {
+  background-color: #0C4C8C;
+}
+
+.btn-contained-secondary {
+  background-color: #FFA500;
+}
+
+.btn-contained-secondary:hover {
+  background-color: #FF7F32;
+}
+
+.btn-contained-error {
+  background-color: #FF5733;
+}
+
+.btn-contained-error:hover {
+  background-color: #FF2A1D;
+}
+
+/* Outlined Variants */
+.btn-outlined {
+  border-width: 2px;
+  border-style: solid;
+  background: none;
+}
+
+.btn-outlined-primary {
+  border-color: #0F52BA;
+  color: #0F52BA;
+}
+
+.btn-outlined-secondary {
+  border-color: #FFA500;
+  color: #FFA500;
+}
+
+.btn-outlined-error {
+  border-color: #FF5733;
+  color: #FF5733;
+}
+
+/* Loading and Disabled States */
+.btn-loading {
+  opacity: 0.6;
+  cursor: wait;
+  pointer-events: none;
+  min-width: 150px;
+}
+
+.btn-disabled {
+  background-color: #ccc;
+  pointer-events: none;
+}
+
+/**Circular Progress**/
+.circular-progress{
+    display: flex;
+    justify-content: center;
+}
