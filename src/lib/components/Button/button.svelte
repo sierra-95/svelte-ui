@@ -9,19 +9,24 @@
   export let externalClass = '';
   export let submit = false;
 
-  let buttonClasses = 'btn';
+  $: buttonClasses = (() => {
+    let classes = 'btn';
 
-  buttonClasses += ` btn-${variant}`;
+    classes += ` btn-${variant}`;
 
-  if (variant === 'contained') {
-    buttonClasses += ` btn-contained-${color}`;
-  } else if (variant === 'outlined') {
-    buttonClasses += ` btn-outlined-${color}`;
-  }
+    if (variant === 'contained') {
+      classes += ` btn-contained-${color}`;
+    } else if (variant === 'outlined') {
+      classes += ` btn-outlined-${color}`;
+    }
 
-  if (isLoading) buttonClasses += ' btn-loading';
-  if (disabled) buttonClasses += ' btn-disabled';
-  if (externalClass) buttonClasses += ` ${externalClass}`;
+    if (isLoading) classes += ' btn-loading';
+    if (disabled) classes += ' btn-disabled';
+    if (externalClass) classes += ` ${externalClass}`;
+
+    return classes;
+  })();
+
 </script>
 
 <style>
