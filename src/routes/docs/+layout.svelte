@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-	import {Header,Menu} from '../../components/index.js';
+	import {Header,Menu, Layout} from '../../components/index.js';
 	
 	/** @type {string | boolean}*/
 	let isMenuOpen;
@@ -59,9 +59,7 @@
 		</div>
 	</div>
 	<!-- Content -->
-	<div class="transition-all duration-300 overflow-y-auto"
-		style={`width: ${isMobile ? '100%' : isMenuOpen ? 'calc(100vw - 300px)' : 'calc(100vw - 70px)'};`}
-	>
-		<slot/>
+	<div class="transition-all duration-300 overflow-y-auto p-4" style={`width: ${isMobile ? '100%' : isMenuOpen ? 'calc(100vw - 300px)' : 'calc(100vw - 70px)'};`}>
+		<Layout><slot/></Layout>
 	</div>
 </div>
