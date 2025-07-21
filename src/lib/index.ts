@@ -8,5 +8,4 @@ export {default as  SiteUnderMaintenance} from './components/site-under-maintena
 export {default as Modal} from './components/modal/modal.svelte';
 //Stores
 export { isLoading } from './stores/isloading.js';
-export {toastStore} from './stores/toast.js'
 export {modalStore} from './stores/modal.js'
