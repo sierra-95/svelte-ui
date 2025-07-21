@@ -2,7 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0px;
+    width: 95%;
+    padding: 5px 0px;
+    cursor: pointer;
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
 }
@@ -12,30 +14,10 @@
     border-top: 1px solid rgb(185, 214, 255);
     border-bottom: 1px solid rgb(185, 214, 255);
 }
-a:hover{
-    text-decoration: underline;
-    transition: color 0.2s ease;
+h2{
+    width: 50%;
+    margin-left: 10px;
 }
-a:active{color: #002B67;}
-.caret {
-    transition: transform 0.3s ease;
-    display: inline-block;
-    margin-left: 5px;
-}
-
-.rotate {
-    transform: rotate(90deg);
-}
-
-.submenu {
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-}
-
-.submenu.closed {
-    max-height: 0;
-}
-
-.submenu.open {
-    max-height: auto;
+.icon-base_radius_override{
+    border-radius: unset;
 }
