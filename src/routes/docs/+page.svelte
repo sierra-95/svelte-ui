@@ -11,7 +11,7 @@
 <main>
   <title>Getting Started</title>
   <p>
-    <strong class="text-[#334155]">@sierra-95/svelte-ui</strong> is a modern crafted UI component library built for the Svelte ecosystem.  
+    <strong class="text-[#334155]">@sierra-95/svelte-ui</strong> is a component library built for the Svelte ecosystem.  
     Designed as a solid foundation for developers, it offers expressive, accessible, and flexible components to accelerate your Svelte projects.
   </p>
   <p>
