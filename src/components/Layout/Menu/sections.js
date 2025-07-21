@@ -1,14 +1,20 @@
+const base = '/svelte';
+const componentsBase = `${base}/components`;
+const storesBase = `${base}/stores`;
+const hooksBase = `${base}/hooks`;
+
 export const routes = {
-    getting_started: '/docs',
-    //Components
-    buttons: '/docs/components/button',
-    progress: '/docs/components/progress',
-    //Stores
-    dispatch: '/docs/stores/dispatch',
-    user: '/docs/stores/user',
-    //Hooks
-    WindowHistory: '/docs/hooks/windowhistory',
+  getting_started: `${base}`,
+  // Components
+  buttons: `${componentsBase}/button`,
+  progress: `${componentsBase}/progress`,
+  // Stores
+  dispatch: `${storesBase}/dispatch`,
+  user: `${storesBase}/user`,
+  // Hooks
+  WindowHistory: `${hooksBase}/windowhistory`,
 };
+
 export const sections = [
     {
         label: '',
