@@ -10,20 +10,20 @@
   <tbody class="text-gray-800">
     <tr>
       <td class="p-3 border font-mono">variant</td>
-      <td class="p-3 border font-mono">'contained' | 'outlined'</td>
+      <td class="p-3 border font-mono">string (contained, outlined)</td>
       <td class="p-3 border font-mono"></td>
       <td class="p-3 border">Defines the button style variant. If used, it <strong>overrides</strong> any Tailwind styles passed via the <strong>style</strong> prop.</td>
     </tr>
     <tr>
       <td class="p-3 border font-mono">color</td>
-      <td class="p-3 border font-mono">'primary' | 'secondary' | 'error'</td>
+      <td class="p-3 border font-mono">string (primary, secondary, error)</td>
       <td class="p-3 border font-mono">'primary'</td>
       <td class="p-3 border">Sets the color scheme, used with <strong>variant</strong> to determine visual appearance.</td>
     </tr>
     <tr>
       <td class="p-3 border font-mono">title</td>
       <td class="p-3 border font-mono">string</td>
-      <td class="p-3 border font-mono">""</td>
+      <td class="p-3 border font-mono">''</td>
       <td class="p-3 border">The button label content.</td>
     </tr>
     <tr>
@@ -64,7 +64,7 @@
     </tr>
     <tr>
       <td class="p-3 border font-mono">onClick=&#123;() =&gt; your_function()&#125;</td>
-      <td class="p-3 border font-mono">function | + s</td>
+      <td class="p-3 border font-mono">function(s)</td>
       <td class="p-3 border font-mono"></td>
       <td class="p-3 border">Function or functions triggered when the button is clicked.</td>
     </tr>
@@ -76,7 +76,7 @@
     </tr>
     <tr>
       <td class="p-3 border font-mono">html2canvas_ignore</td>
-      <td class="p-3 border font-mono">'true' | 'false'</td>
+      <td class="p-3 border font-mono">string (true, false)</td>
       <td class="p-3 border font-mono">'false'</td>
       <td class="p-3 border">When set to <strong>'true'</strong>, activates data-html2canvas-ignore to exclude the button from screenshots.</td>
     </tr>
