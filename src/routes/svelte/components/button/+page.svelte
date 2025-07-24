@@ -43,7 +43,7 @@
 	</div>
 	<div class='flex flex-col gap-2'>
 		<h2 class='mt-4 text-xl'>This is a custom button. You can customize using Tailwind css using the <strong>style</strong> prop.</h2>
-		<Button title="Custom Button" style="w-[200px] bg-black" isLoading spinner={50} thickness={10}>Button</Button>
+		<Button title="Custom Button" style="w-[200px] bg-black" isLoading spinner={50} thickness={10}></Button>
 		<RenderCode
 			lang="svelte"
 			code={`
