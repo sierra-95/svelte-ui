@@ -3,12 +3,12 @@
 	import {RenderCode, ButtonTable} from '../../../../components/index.js';
 	const contained_buttons = [
 		{ color: 'primary', title: 'Primary contained' },
-		{ color: 'secondary', title: 'Secondary contained' },
+		{ color: 'warning', title: 'Warning contained' },
 		{ color: 'error', title: 'Error contained' }
 	];
 	const outlined_buttons = [
 		{ color: 'primary', title: 'Primary outlined' },
-		{ color: 'secondary', title: 'Secondary outlined' },
+		{ color: 'warning', title: 'Warning outlined' },
 		{ color: 'error', title: 'Error outlined' }
 	];
 </script>

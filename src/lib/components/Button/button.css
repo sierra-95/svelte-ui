@@ -22,7 +22,7 @@
 .btn-contained-primary {
   background-color: #0F52BA;
 }
-.btn-contained-secondary {
+.btn-contained-warning {
   background-color: #FFA500;
 }
 .btn-contained-error {
@@ -32,7 +32,7 @@
   border-color: #0F52BA;
   color: #0F52BA;
 }
-.btn-outlined-secondary {
+.btn-outlined-warning {
   border-color: #FFA500;
   color: #FFA500;
 }

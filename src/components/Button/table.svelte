@@ -16,7 +16,7 @@
     </tr>
     <tr>
       <td class="p-3 border font-mono">color</td>
-      <td class="p-3 border font-mono">string (primary, secondary, error)</td>
+      <td class="p-3 border font-mono">string (primary, warning, error)</td>
       <td class="p-3 border font-mono">'primary'</td>
       <td class="p-3 border">Sets the color scheme, used with <strong>variant</strong> to determine visual appearance.</td>
     </tr>
