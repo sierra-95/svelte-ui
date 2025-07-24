@@ -1,29 +1,30 @@
 <script lang="ts">
   import { CircularProgress } from '$lib/index.js';
   
-  export let variant: 'contained' | 'outlined' = 'contained';
+  export let variant: 'contained' | 'outlined' | '' = '';
   export let color = 'primary';
+  export let title = "";
+  export let pill = false;
+  export let spinner = 20;
+  export let thickness = 2;
   export let disabled = false;
   export let isLoading = false;
   export let onClick = () => {};
-  export let externalClass = '';
+  export let style = '';
   export let submit = false;
+  export let html2canvas_ignore = "false";
 
   $: buttonClasses = (() => {
     let classes = 'base-btn';
-
-    classes += ` btn-${variant}`;
-
+    //Variant
+    if(variant) classes += ` btn-${variant}`;
+    //Color
     if (variant === 'contained') {
       classes += ` btn-contained-${color}`;
     } else if (variant === 'outlined') {
       classes += ` btn-outlined-${color}`;
     }
-
-    if (isLoading) classes += ' btn-loading';
-    if (disabled) classes += ' btn-disabled';
-    if (externalClass) classes += ` ${externalClass}`;
-
+    if (style) classes += ` ${style}`;
     return classes;
   })();
 
@@ -34,15 +35,17 @@
 </style>
 
 <button
+  data-html2canvas-ignore={html2canvas_ignore}
+  class:pill={pill}
+  class:disabled={isLoading || disabled}
   class="{buttonClasses}"
   on:click={onClick}
-  disabled={disabled}
+  disabled={isLoading || disabled}
   type={submit ? 'submit' : 'button'}
+  title={title}  
 >
   {#if isLoading}
-    <div class="circular-progress">
-      <CircularProgress size={30} thickness={2} />
-    </div>
+    <div id='btn-loading'><CircularProgress size={spinner} thickness={thickness} /></div>
   {/if}
   {#if !isLoading}
     <slot></slot>
