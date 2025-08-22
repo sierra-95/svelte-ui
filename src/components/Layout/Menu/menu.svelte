@@ -9,6 +9,14 @@
 
     beforeNavigate(() => isLoading.set(true));
 	afterNavigate(() => isLoading.set(false));
+
+	export let hovered;
+	const handleMouseEnter = (/** @type {{ path: string; label: string; icon: string; subitems: { path: string; label: string; }[]; } | { path: string; label: string; icon: string; subitems?: undefined; }} */ item) => {
+        if (item.subitems) hovered = item;
+    };
+    const handleMouseLeave = () => {
+        hovered = null;
+    };
 </script>
 <style>
     @import './menu.css';
@@ -25,6 +33,8 @@
 		{#each section.items as item}
 			<a  title={item.label}
 				href={item.path}
+				on:mouseenter={() => handleMouseEnter(item)}
+				on:mouseleave={handleMouseLeave}
 				on:click={handleMobileSelect}
 				class="icon-base"
 				class:icon-base_radius_override={!isMenuOpen}

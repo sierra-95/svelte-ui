@@ -1,10 +1,14 @@
 <script>
     import { onMount } from 'svelte';
-	import {Header,Menu, Layout} from '../../components/index.js';
+	import {Header,Menu, Layout, Flyout} from '../../components/index.js';
 	
 	/** @type {string | boolean}*/
 	let isMenuOpen;
 	let isMobile = false;
+	/**
+	 * @type {{ label?: string, path?: string, icon?: string, subitems?: any[] } | null}
+	 */
+	let hovered = null;
 
 	onMount(() => {
 		if (typeof localStorage !== 'undefined') {
@@ -54,11 +58,11 @@
 		class:z-50={isMobile}
 		style={`width: ${isMenuOpen ? '300px' : isMobile ? '0px' : '70px'}; transform: translateX(${isMobile && !isMenuOpen ? '-100%' : '0'})`}
 	>
-		<Menu handleMobileSelect={handleMobileSelect} isMenuOpen={isMenuOpen}/>
-		
+		<Menu bind:hovered handleMobileSelect={handleMobileSelect} isMenuOpen={isMenuOpen}/>
 	</div>
 	<!-- Content -->
-	<div class="transition-all duration-300 overflow-y-auto p-4" style={`width: ${isMobile ? '100%' : isMenuOpen ? 'calc(100vw - 300px)' : 'calc(100vw - 70px)'};`}>
+	<div class="relative transition-all duration-300 overflow-y-auto" style={`width: ${isMobile ? '100%' : isMenuOpen ? 'calc(100vw - 300px)' : 'calc(100vw - 70px)'};`}>
+		<Flyout {hovered}/>
 		<Layout><slot/></Layout>
 	</div>
 </div>
