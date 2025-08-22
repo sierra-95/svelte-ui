@@ -25,7 +25,15 @@ export const sections = [
     {
         label: 'Components',
         items: [
-            { path: routes.buttons, label: 'Buttons', icon: 'fa fa-square' },
+            { 
+                path: routes.buttons, 
+                label: 'Buttons', 
+                icon: 'fa fa-square',
+                subitems: [
+                    { path: `${routes.buttons}/default`, label: 'Default Buttons' },
+                    { path: `${routes.buttons}/custom`, label: 'Custom Buttons' }
+                ] 
+            },
             { path: routes.progress, label: 'Progress', icon: 'fa fa-spinner' }
         ]
     },

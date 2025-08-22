@@ -54,9 +54,8 @@
 		class:z-50={isMobile}
 		style={`width: ${isMenuOpen ? '300px' : isMobile ? '0px' : '70px'}; transform: translateX(${isMobile && !isMenuOpen ? '-100%' : '0'})`}
 	>
-		<div class="transition-opacity duration-300 ease-in-out">
-			<Menu handleMobileSelect={handleMobileSelect} isMenuOpen={isMenuOpen}/>
-		</div>
+		<Menu handleMobileSelect={handleMobileSelect} isMenuOpen={isMenuOpen}/>
+		
 	</div>
 	<!-- Content -->
 	<div class="transition-all duration-300 overflow-y-auto p-4" style={`width: ${isMobile ? '100%' : isMenuOpen ? 'calc(100vw - 300px)' : 'calc(100vw - 70px)'};`}>
