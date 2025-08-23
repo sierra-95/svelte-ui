@@ -4,6 +4,9 @@
     import { isLoading } from '$lib/index.js';
     import {sections} from './sections.js';
 
+	/**
+   * @type {(e: MouseEvent & { currentTarget: HTMLAnchorElement }) => void}
+   */
     export let handleMobileSelect = () => {};
     export let isMenuOpen;
 

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import {Button} from '$lib/index.js'
-	import {RenderCode, ButtonTable} from '../../../../components/index.js';
+	import {RenderCode, ButtonTable} from '../../../../../components/index.js';
 	const contained_buttons = [
 		{ color: 'primary', title: 'Primary contained' },
 		{ color: 'warning', title: 'Warning contained' },

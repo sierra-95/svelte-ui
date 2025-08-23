@@ -37,8 +37,12 @@
 		window.addEventListener('resize', updateIsMobile);
 		return () => window.removeEventListener('resize', updateIsMobile);
 	});
-	function handleMobileSelect() {
+	/**
+	 * @param {MouseEvent & { currentTarget: HTMLAnchorElement }} e
+	 */
+	function handleMobileSelect(e) {
 		if (isMobile) isMenuOpen = false;
+		if (!isMobile && hovered?.subitems?.length) e.preventDefault();
 	}
 </script>
 
@@ -58,11 +62,11 @@
 		class:z-50={isMobile}
 		style={`width: ${isMenuOpen ? '300px' : isMobile ? '0px' : '70px'}; transform: translateX(${isMobile && !isMenuOpen ? '-100%' : '0'})`}
 	>
-		<Menu bind:hovered handleMobileSelect={handleMobileSelect} isMenuOpen={isMenuOpen}/>
+		<Menu {isMenuOpen} bind:hovered handleMobileSelect={handleMobileSelect}/>
 	</div>
 	<!-- Content -->
 	<div class="relative transition-all duration-300 overflow-y-auto" style={`width: ${isMobile ? '100%' : isMenuOpen ? 'calc(100vw - 300px)' : 'calc(100vw - 70px)'};`}>
-		<Flyout {hovered}/>
+		<Flyout {hovered} {isMobile}/>
 		<Layout><slot/></Layout>
 	</div>
 </div>
