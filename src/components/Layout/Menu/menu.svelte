@@ -12,10 +12,11 @@
 
 	export let hovered;
 	const handleMouseEnter = (/** @type {{ path: string; label: string; icon: string; subitems: { path: string; label: string; }[]; } | { path: string; label: string; icon: string; subitems?: undefined; }} */ item) => {
-        if (item.subitems) hovered = item;
-    };
-    const handleMouseLeave = () => {
-        hovered = null;
+        if (item.subitems){
+			hovered = item;
+		}else{
+			hovered = null;
+		}
     };
 </script>
 <style>
@@ -34,7 +35,6 @@
 			<a  title={item.label}
 				href={item.path}
 				on:mouseenter={() => handleMouseEnter(item)}
-				on:mouseleave={handleMouseLeave}
 				on:click={handleMobileSelect}
 				class="icon-base"
 				class:icon-base_radius_override={!isMenuOpen}
