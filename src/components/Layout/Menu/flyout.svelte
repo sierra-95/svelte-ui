@@ -9,7 +9,7 @@
     <div 
         role='list'
         class='z-50 absolute left-0 w-50 h-full bg-white border-r-1 border-gray-300
-        p-4 flex flex-col underline transition-transform duration-500 transform'
+        p-4 flex flex-col gap-2 underline transition-transform duration-500 transform'
         class:-translate-x-50={!hovered}
         on:mouseleave={() => hovered = null}
     >
