@@ -1,6 +1,6 @@
 <script lang="ts">
 	import {Button} from '$lib/index.js'
-	import {RenderCode, ButtonTable} from '../../../../../components/index.js';
+	import {RenderCode, ButtonDefaultTable} from '../../../../../components/index.js';
 	const contained_buttons = [
 		{ color: 'primary', title: 'Primary contained' },
 		{ color: 'warning', title: 'Warning contained' },
@@ -50,5 +50,5 @@
 			<Button isLoading spinner={50} thickness={10} style="w-[100px] bg-black">Button</Button>
 		`}/>
 	</div>
-	<div class='overflow-x-auto'><ButtonTable/></div>
+	<div class='overflow-x-auto'><ButtonDefaultTable/></div>
 </main>
