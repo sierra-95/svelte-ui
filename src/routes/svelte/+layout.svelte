@@ -1,5 +1,6 @@
 <script>
     import { onMount } from 'svelte';
+	import {LinearProgress, isLoading} from '$lib/index.js'
 	import {Header,Menu, Layout, Flyout} from '../../components/index.js';
 	
 	/** @type {string | boolean}*/
@@ -53,6 +54,9 @@
 </style>
 
 <Header toggleMenu={toggleMenu}/>
+{#if $isLoading}
+	<LinearProgress />
+{/if}
 <!--Menu-->
 <div class="flex w-full h-[calc(100vh-70px)] overflow-hidden">
 	<div
