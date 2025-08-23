@@ -1,7 +1,7 @@
 <table class="table-auto w-full border border-gray-300 text-sm text-left">
   <thead class="bg-gray-100 text-xs uppercase text-gray-600">
     <tr>
-      <th class="p-3 border">Button</th>
+      <th class="p-3 border">Import Name</th>
       <th class="p-3 border">Prop</th>
       <th class="p-3 border">Type</th>
       <th class="p-3 border">Default</th>
@@ -11,7 +11,7 @@
 
     <!-- Swipe Button -->
     <tr>
-      <td class="p-3 border font-mono" rowspan="3">Swipe Button</td>
+      <td class="p-3 border font-mono" rowspan="3">ButtonSwipe</td>
       <td class="p-3 border font-mono">link</td>
       <td class="p-3 border font-mono">string</td>
       <td class="p-3 border font-mono">#</td>
@@ -29,7 +29,7 @@
 
     <!-- Marquee Button -->
     <tr>
-      <td class="p-3 border font-mono" rowspan="3">Marquee Button</td>
+      <td class="p-3 border font-mono" rowspan="3">ButtonMarquee</td>
       <td class="p-3 border font-mono">link</td>
       <td class="p-3 border font-mono">string</td>
       <td class="p-3 border font-mono">#</td>
@@ -47,7 +47,7 @@
 
     <!-- Flip Button -->
     <tr>
-      <td class="p-3 border font-mono" rowspan="5">Flip Button</td>
+      <td class="p-3 border font-mono" rowspan="5">ButtonFlip</td>
       <td class="p-3 border font-mono">link</td>
       <td class="p-3 border font-mono">string</td>
       <td class="p-3 border font-mono">#</td>

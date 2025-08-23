@@ -12,9 +12,12 @@
 </style>
 <main class='flex flex-col gap-4'>
     <h1 class="font-bold text-2xl">Custom Buttons</h1>
-    <h2>These buttons are not built to be as flexible compared to default buttons.
-        They are built to be used as-is, with minimal customization options.
-    </h2>
+    <h2>These buttons are not built to be as flexible compared to default buttons.</h2>
+    <ol class="list-decimal pl-5">
+        <li>They don’t support <code>on:click()</code> or aliases, since they are built with <code>&lt;a&gt;</code> tags.</li>
+        <li>They are designed to be used as-is, with minimal customization options.</li>
+        <li>All have fixed dimensions (w × h), with <span class="text-blue-500">Flip</span> as the exception. Flip automatically adjusts its width based on text length.</li>
+    </ol>
     <RenderCode
         lang="svelte"
         code={`
