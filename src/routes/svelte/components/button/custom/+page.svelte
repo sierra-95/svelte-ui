@@ -3,6 +3,13 @@
     import {RenderCode} from '../../../../../components/index.js';
 </script>
 
+<style>
+    .wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+</style>
 <main class='flex flex-col gap-4'>
     <h1 class="font-bold text-2xl">Custom Buttons</h1>
     <h2>These buttons are not built to be as flexible compared to default buttons.
@@ -17,17 +24,15 @@
 
         <ButtonMarquee text='Sign In' link='/auth' bg='red' color = 'blue'  />
     `}/>
-
-    
-    <div class="flex justify-between items-center">
+    <div class="wrap">
         <h2>1. Swipe Button</h2>
         <ButtonSwipe />
     </div>
-    <div class="flex justify-between items-center">
+    <div class="wrap">
         <h2>2. Marquee Button</h2>
         <ButtonMarquee/>
     </div>
-    <div class="flex justify-between items-center">
+    <div class="wrap">
         <h2>3. Flip Button</h2>
         <ButtonFlip />
     </div>
