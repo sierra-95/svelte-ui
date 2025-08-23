@@ -1,5 +1,5 @@
 export {default as CircularProgress} from './components/CircularProgress/CircularProgress.svelte';
-export {default as Button } from './components/Button/button.svelte';
+export {default as Button } from './components/Button/default/button.svelte';
 export {default as LinearProgress} from './components/LinearProgress/LinearProgress.svelte';
 
 
