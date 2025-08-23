@@ -30,8 +30,8 @@ export const sections = [
                 label: 'Buttons', 
                 icon: 'fa fa-square',
                 subitems: [
-                    { path: `${routes.buttons}/default`, label: 'Default' },
-                    { path: `${routes.buttons}/custom`, label: 'Custom' }
+                    { path: `${routes.buttons}/default`, label: 'Default buttons' },
+                    { path: `${routes.buttons}/custom`, label: 'Custom buttons' }
                 ] 
             },
             { path: routes.progress, label: 'Progress', icon: 'fa fa-spinner' }
