@@ -14,7 +14,7 @@
 </script>
 
 <main class='flex flex-col gap-4'>
-	<h1 class="font-bold text-2xl">Button Component</h1>
+	<h1 class="font-bold text-2xl">Default Buttons</h1>
 	<RenderCode
 		lang="svelte"
 		code={`
