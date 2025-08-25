@@ -1,7 +1,5 @@
-<script lang="ts">
-	import {LinearProgress, CircularProgress} from '$lib/index.js'
-
+<script>
+  import { MobileMenu } from '../../../components/index.js';
 </script>
 
-<LinearProgress/>
-<CircularProgress/>
+<MobileMenu label="Progress" />
