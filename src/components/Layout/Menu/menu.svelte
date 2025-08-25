@@ -41,7 +41,11 @@
 				on:click={handleMobileSelect}
 				class="icon-base"
 				class:icon-base_radius_override={!isMenuOpen}
-				class:icon-active={$page.url.pathname === item.path}
+				class:icon-active={
+				item.path === '/' 
+					? $page.url.pathname === '/' 
+					: $page.url.pathname.startsWith(item.path)
+				}
 			>
 				<i class={item.icon} style="font-size: 20px; color: rgb(0, 43, 103)"></i>
 				<h2 class:hidden={!isMenuOpen}>{item.label}</h2>

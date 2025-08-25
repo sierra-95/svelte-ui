@@ -1,18 +1,17 @@
-const base = '/svelte';
-const componentsBase = `${base}/components`;
-const storesBase = `${base}/stores`;
-const hooksBase = `${base}/hooks`;
+const components = `/components`;
+const stores = `/stores`;
+const hooks = `/hooks`;
 
 export const routes = {
-  getting_started: `${base}`,
+  getting_started: '/',
   // Components
-  buttons: `${componentsBase}/button`,
-  progress: `${componentsBase}/progress`,
+  buttons: `${components}/button`,
+  progress: `${components}/progress`,
   // Stores
-  dispatch: `${storesBase}/dispatch`,
-  user: `${storesBase}/user`,
+  dispatch: `${stores}/dispatch`,
+  user: `${stores}/user`,
   // Hooks
-  WindowHistory: `${hooksBase}/windowhistory`,
+  WindowHistory: `${hooks}/windowhistory`,
 };
 
 export const sections = [
@@ -34,7 +33,15 @@ export const sections = [
                     { path: `${routes.buttons}/custom`, label: 'Custom buttons' }
                 ] 
             },
-            { path: routes.progress, label: 'Progress', icon: 'fa fa-spinner' }
+            { 
+                path: routes.progress,
+                label: 'Progress', 
+                icon: 'fa fa-spinner',
+                subitems: [
+                    { path: `${routes.progress}/circular`, label: 'Circular progress' },
+                    { path: `${routes.progress}/linear`, label: 'Linear progress' }
+                ]
+            }
         ]
     },
     {

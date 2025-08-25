@@ -1,5 +1,5 @@
 <script>
-  import { sections } from '../../../../components/index.js';
+  import { sections } from '../../../components/index.js';
 
   const menu = sections
     .find(s => s.label === 'Components')

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import {RenderCode} from '../../components/index.js'; 
+  import {RenderCode} from '../components/index.js'; 
 
 </script>
 
