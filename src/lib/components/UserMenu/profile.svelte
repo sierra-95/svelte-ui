@@ -16,7 +16,7 @@
     open = false;
   };
   
-  const handleLogout = (/** @type {string} */ action) => {
+  const handleLogout = () => {
     handleClose();
     isLoading.update(val => !val);
     window.location.href = '/logout';

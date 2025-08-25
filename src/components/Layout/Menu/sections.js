@@ -7,9 +7,9 @@ export const routes = {
   // Components
   buttons: `${components}/button`,
   progress: `${components}/progress`,
+  user: `${components}/user`,
   // Stores
   dispatch: `${stores}/dispatch`,
-  user: `${stores}/user`,
   // Hooks
   WindowHistory: `${hooks}/windowhistory`,
 };
@@ -41,14 +41,14 @@ export const sections = [
                     { path: `${routes.progress}/circular`, label: 'Circular progress' },
                     { path: `${routes.progress}/linear`, label: 'Linear progress' }
                 ]
-            }
+            },
+            { path: routes.user, label: 'User', icon: 'fa fa-user' }
         ]
     },
     {
         label: 'Stores',
         items: [
             { path: routes.dispatch, label: 'Dispatch', icon: 'fa fa-bell' },
-            { path: routes.user, label: 'User', icon: 'fa fa-user' }
         ]
     },
     {
