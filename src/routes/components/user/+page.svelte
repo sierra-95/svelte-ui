@@ -1,1 +1,5 @@
-<h2>Pending build</h2>
+<script>
+    import {UserMenu} from '$lib/index.js'
+</script>
+
+<UserMenu/>
