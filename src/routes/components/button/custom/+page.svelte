@@ -17,7 +17,7 @@
 <ol class="list-decimal pl-5">
     <li>They don’t support <code>on:click()</code> or aliases, since they are built with <code>&lt;a&gt;</code> tags.</li>
     <li>They are designed to be used as-is, with minimal customization options.</li>
-    <li>All have fixed dimensions (w × h), with <span class="text-blue-500">Flip</span> as the exception. Flip automatically adjusts its width based on text length.</li>
+    <li>All have fixed dimensions (w × h), with <span class="text-blue-500">Marquee</span> as the exception. Marquee automatically adjusts its width based on text length.</li>
 </ol>
 <RenderCode
     lang="svelte"
