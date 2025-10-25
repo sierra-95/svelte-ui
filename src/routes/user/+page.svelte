@@ -37,7 +37,6 @@
 	lang="svelte"
 	code={`
 	<\script>
-        import { goto } from '$app/navigation';
 		import { UserMenu } from '@sierra-95/svelte-ui';
 
         let user = {
@@ -50,7 +49,6 @@
         }
         function handleProfile(){
           // Handle profile logic here
-          goto('/settings/profile')
         }
 	<\/script>
     <div class="w-full flex items-end justify-end">
