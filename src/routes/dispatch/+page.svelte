@@ -1,7 +1,7 @@
 <script>
     import { onMount, onDestroy } from 'svelte';
     import {setDispatchMessage,clearDispatchMessage} from '$lib/index.js'
-    import {RenderCode} from '../../components/index.js';
+    import {RenderCode, DispatchTable} from '../../components/index.js';
     onMount(() => {
         setDispatchMessage('success', 'Dispatch Triggered', 6000, true);
     });
@@ -57,3 +57,4 @@
 	<\/script>
 
 `}/>
+<DispatchTable />
