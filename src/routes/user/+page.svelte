@@ -53,7 +53,7 @@
           goto('/settings/profile')
         }
 	<\/script>
-    <div class="div w-full flex items-end justify-end">
+    <div class="w-full flex items-end justify-end">
         <!--By default, UserMenu dropdown is absolute left of the parent
         If you need it on the right, set absolute='right'
         Like the example below-->
