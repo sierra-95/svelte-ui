@@ -26,22 +26,22 @@
   background-color: #0F52BA;
 }
 .btn-contained-warning {
-  background-color: #FFA500;
+  background-color: orange;
 }
 .btn-contained-error {
-  background-color: #FF5733;
+  background-color: red;
 }
 .btn-outlined-primary {
   border-color: #0F52BA;
   color: #0F52BA;
 }
 .btn-outlined-warning {
-  border-color: #FFA500;
-  color: #FFA500;
+  border-color: orange;
+  color: orange;
 }
 .btn-outlined-error {
-  border-color: #FF5733;
-  color: #FF5733;
+  border-color: red;
+  color: red;
 }
 
 /*****Disabled********/
