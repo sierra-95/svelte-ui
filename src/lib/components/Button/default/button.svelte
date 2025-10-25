@@ -7,10 +7,9 @@
   type _buttonType = 'button' | 'submit' | 'reset';
 
 	const {
-    children,
 		variant = 'contained' as _variant,
 		color = 'primary' as _color,
-    type = 'button' as _buttonType,
+    	type = 'button' as _buttonType,
 		title = '',
 		pill = false,
 		spinner = 20,
@@ -19,6 +18,7 @@
 		isLoading = false,
 		html2canvas_ignore = 'false',
 		style = '',
+    	children = null,
 		...rest
 	} = $props();
 

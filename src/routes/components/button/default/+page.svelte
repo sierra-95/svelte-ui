@@ -5,12 +5,12 @@
 		{ color: 'primary', title: 'Primary contained' },
 		{ color: 'warning', title: 'Warning contained' },
 		{ color: 'error', title: 'Error contained' }
-	];
+	] as const;
 	const outlined_buttons = [
 		{ color: 'primary', title: 'Primary outlined' },
 		{ color: 'warning', title: 'Warning outlined' },
 		{ color: 'error', title: 'Error outlined' }
-	];
+	] as const;
 </script>
 
 <title>Default Buttons</title>
@@ -37,7 +37,7 @@
 {/each}
 </div>
 <div class="flex gap-4">
-	<Button variant='contained' isLoading title="Loading"></Button>
+	<Button variant="contained"  isLoading title="Loading"></Button>
 	<Button variant='contained' disabled title="Disabled">Button</Button>
 	<Button pill variant='outlined' title="Pill"><i class="fa fa-chevron-right"></i></Button>
 </div>
