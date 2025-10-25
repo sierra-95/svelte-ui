@@ -15,6 +15,7 @@
 	<\/script>
 
 	<CircularProgress />
+
 `}/>
 <h2 class="font-bold text-2xl">Linear Progress</h2>
 <LinearProgress/>
@@ -26,4 +27,5 @@
 	<\/script>
 
 	<LinearProgress />
+	
 `}/>

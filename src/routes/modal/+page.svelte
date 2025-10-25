@@ -17,7 +17,6 @@
 
 <title>Modal</title>
 <h1 class="font-bold text-2xl">Alert Modal</h1>
-<Button onclick={triggerModal}>Click here</Button>
 <h3>Place this anywhere in your app</h3>
 <RenderCode
 	lang="svelte"
@@ -52,3 +51,4 @@
 	<Button onclick={triggerModal}>Click here</Button>
 
 `}/>
+<Button onclick={triggerModal}>Click here</Button>
