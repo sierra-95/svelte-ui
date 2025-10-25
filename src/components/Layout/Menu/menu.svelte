@@ -4,28 +4,18 @@
     import { isLoading } from '$lib/index.js';
     import {sections} from './sections.js';
 
-	/**
-   * @type {(e: MouseEvent & { currentTarget: HTMLAnchorElement }) => void}
-   */
-    export let handleMobileSelect = () => {};
-    export let isMenuOpen;
+	export let mobileMenuSelect;
+	export let isMenuOpen;
 
-    beforeNavigate(() => isLoading.set(true));
+	let size = 30;
+	
+	beforeNavigate(() => isLoading.set(true));
 	afterNavigate(() => isLoading.set(false));
-
-	export let hovered;
-	const handleMouseEnter = (/** @type {{ path: string; label: string; icon: string; subitems: { path: string; label: string; }[]; } | { path: string; label: string; icon: string; subitems?: undefined; }} */ item) => {
-        if (item.subitems){
-			hovered = item;
-		}else{
-			hovered = null;
-		}
-    };
 </script>
 <style>
     @import './menu.css';
 </style>
-<div class="flex flex-col gap-3 items-end pt-5">
+<div id="menu" class="flex flex-col gap-3 items-end pt-5">
 	{#each sections as section, i}
 		{#if section.label}
 			<div class="w-5/6">
@@ -37,15 +27,11 @@
 		{#each section.items as item}
 			<a  title={item.label}
 				href={item.path}
-				on:mouseenter={() => handleMouseEnter(item)}
-				on:click={handleMobileSelect}
+				on:click={mobileMenuSelect}
 				class="icon-base"
 				class:icon-base_radius_override={!isMenuOpen}
-				class:icon-active={
-				item.path === '/' 
-					? $page.url.pathname === '/' 
-					: $page.url.pathname.startsWith(item.path)
-				}
+				class:icon-active={$page.url.pathname === item.path}
+
 			>
 				<i class={item.icon} style="font-size: 20px; color: rgb(0, 43, 103)"></i>
 				<h2 class:hidden={!isMenuOpen}>{item.label}</h2>

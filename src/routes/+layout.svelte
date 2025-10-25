@@ -1,17 +1,12 @@
 <script>
 	import '../app.css';
-	
-	let { children } = $props();
-
     import { onMount } from 'svelte';
 	import {LinearProgress, isLoading, isMobile} from '$lib/index.js'
-	import {Header,Menu, Layout, Flyout} from '../components/index.js';
+	import {Header,Menu, Layout} from '../components/index.js';
 	
+	let { children } = $props();
 	let isMenuOpen = $state(false);
-	/**
-	 * @type {{ label?: string, path?: string, icon?: string, subitems?: any[] } | null}
-	 */
-	let hovered = $state(null);
+	
 	$effect(() => {
 		if ($isMobile) isMenuOpen = false;
 	});
@@ -28,46 +23,34 @@
 			}
 		}
 	});
-
 	const toggleMenu = () => {
 		isMenuOpen = !isMenuOpen;
+		if($isMobile) return;
 		if (typeof localStorage !== 'undefined') {
 			localStorage.setItem('isMenuOpen', isMenuOpen.toString());
 		}
 	};
-	/**
-	 * @param {MouseEvent & { currentTarget: HTMLAnchorElement }} e
-	 */
-	function handleMobileSelect(e) {
+	const mobileMenuSelect = () => {
 		if ($isMobile) isMenuOpen = false;
-		if (!$isMobile && hovered?.subitems?.length) e.preventDefault();
-	}
+	};
 </script>
 
-<style>
-	.menu-transition {
-		transition: transform 0.3s ease, width 0.3s ease;
-	}
-</style>
-
 <Header toggleMenu={toggleMenu}/>
-{#if $isLoading}
-	<LinearProgress />
-{/if}
-<!--Menu-->
-<div class="flex w-full h-[calc(100vh-70px)] overflow-hidden">
+{#if $isLoading}<LinearProgress />{/if}
+<div class="flex w-full h-[calc(100vh-70px)]">
 	<div
-		class="menu-transition h-full bg-white overflow-hidden border-r-1 border-gray-300"
+		class="h-full bg-white  border-r-1 border-gray-300"
 		class:fixed={$isMobile}
 		class:left-0={$isMobile}
-		class:z-50={$isMobile}
-		style={`width: ${isMenuOpen ? '300px' : $isMobile ? '0px' : '70px'}; transform: translateX(${$isMobile && !isMenuOpen ? '-100%' : '0'})`}
-	>
-		<Menu {isMenuOpen} bind:hovered handleMobileSelect={handleMobileSelect}/>
+		class:z-5={$isMobile}
+		style={
+			$isMobile
+			? `width:300px;transform: translateX(${isMenuOpen ? '0%' : '-100%'}); transition: transform 0.3s ease;`
+			: `width: ${isMenuOpen ? '300px' : '70px'}; transition: width 0.3s ease;`
+		}
+	><Menu {isMenuOpen} mobileMenuSelect={mobileMenuSelect} />
 	</div>
-	<!-- Content -->
-	<div class="relative transition-all duration-300 overflow-y-auto" style={`width: ${$isMobile ? '100%' : isMenuOpen ? 'calc(100vw - 300px)' : 'calc(100vw - 70px)'};`}>
-		<Flyout hovered={hovered}/>
+	<div class="overflow-y-auto w-full">
 		<Layout>{@render children()}</Layout>
 	</div>
 </div>

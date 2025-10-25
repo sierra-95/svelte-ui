@@ -1,17 +1,13 @@
-const components = `/components`;
-const stores = `/stores`;
-const hooks = `/hooks`;
+const buttons = `/button`;
 
 export const routes = {
-  getting_started: '/',
-  // Components
-  buttons: `${components}/button`,
-  progress: `${components}/progress`,
-  user: `${components}/user`,
-  // Stores
-  dispatch: `${stores}/dispatch`,
-  // Hooks
-  WindowHistory: `${hooks}/windowhistory`,
+    getting_started: '/',
+    // Buttons
+    default_button: `${buttons}/default`,
+    custom_button: `${buttons}/custom`,
+    //others
+    progress: `/progress`,
+    user: `/user`,
 };
 
 export const sections = [
@@ -22,39 +18,38 @@ export const sections = [
         ]
     },
     {
-        label: 'Components',
+        label: 'Buttons',
         items: [
             { 
-                path: routes.buttons, 
-                label: 'Buttons', 
+                path: routes.default_button, 
+                label: 'Default', 
                 icon: 'fa fa-square',
-                subitems: [
-                    { path: `${routes.buttons}/default`, label: 'Default buttons' },
-                    { path: `${routes.buttons}/custom`, label: 'Custom buttons' }
-                ] 
             },
+            { 
+                path: routes.custom_button,
+                label: 'Custom', 
+                icon: 'fa fa-adjust',
+            }
+        ]
+    },
+    {
+        label: 'Progress',
+        items: [
             { 
                 path: routes.progress,
                 label: 'Progress', 
                 icon: 'fa fa-spinner',
-                subitems: [
-                    { path: `${routes.progress}/circular`, label: 'Circular progress' },
-                    { path: `${routes.progress}/linear`, label: 'Linear progress' }
-                ]
             },
-            { path: routes.user, label: 'User', icon: 'fa fa-user' }
         ]
     },
     {
-        label: 'Stores',
+        label: 'Menus',
         items: [
-            { path: routes.dispatch, label: 'Dispatch', icon: 'fa fa-bell' },
+            { 
+                path: routes.user, 
+                label: 'User',
+                icon: 'fa fa-user' ,
+            }
         ]
     },
-    {
-        label: 'Hooks',
-        items: [
-            { path: routes.WindowHistory, label: 'Browser History', icon: 'fa fa-chrome' }
-        ]
-    }
 ];

@@ -8,18 +8,18 @@
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
 }
-.icon-base:hover {
-  background-color: rgb(245, 250, 255); 
-}
 .icon-active {
     background-color: rgb(236, 244, 255);
     border-left: 1px solid rgb(185, 214, 255);
     border-top: 1px solid rgb(185, 214, 255);
     border-bottom: 1px solid rgb(185, 214, 255);
 }
-h2{
+#menu h2{
     width: 50%;
     margin-left: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .icon-base_radius_override{
     border-radius: unset;

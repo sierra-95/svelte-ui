@@ -1,7 +1,6 @@
 <script>
     import {UserMenu} from '$lib/index.js'
-	import {RenderCode} from '../../../components/index.js';
-    import Render from '../../../components/RenderCode/render.svelte';
+	import {RenderCode} from '../../components/index.js';
     let open = $state(true)
 
     let user = {
@@ -21,7 +20,7 @@
     href="https://github.com/sierra-95/svelte-ui/blob/main/src/lib/components/UserMenu/profile.svelte">GitHub code</a>.
 </h2>
 <h2>Add this in your <strong>index/app.html</strong> or <strong>svelte:head</strong></h2>
-<Render
+<RenderCode
     lang="html"
     code={`
     <\script

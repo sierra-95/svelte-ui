@@ -1,6 +1,6 @@
 <script>
     import {ButtonFlip, ButtonMarquee, ButtonSwipe} from '$lib/index.js'
-    import {RenderCode, ButtonCustomTable} from '../../../../components/index.js';
+    import {RenderCode, ButtonCustomTable} from '../../../components/index.js';
 </script>
 
 <style>
