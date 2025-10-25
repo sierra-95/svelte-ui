@@ -8,6 +8,8 @@ export const routes = {
     //others
     progress: `/progress`,
     user: `/user`,
+    modal: `/modal`,
+    dispatch: `/dispatch`,
 };
 
 export const sections = [
@@ -49,6 +51,21 @@ export const sections = [
                 path: routes.user, 
                 label: 'User',
                 icon: 'fa fa-user' ,
+            },
+        ]
+    },
+    {
+        label: 'Alerts',
+        items: [
+            { 
+                path: routes.dispatch, 
+                label: 'Dispatch',
+                icon: 'fa fa-commenting' ,
+            },
+            { 
+                path: routes.modal, 
+                label: 'Modal',
+                icon: 'fa fa-exclamation-triangle' ,
             }
         ]
     },
