@@ -4,22 +4,22 @@
 
 <style>
 </style>
-<main>
+<main class="space-y-4">
   <title>Getting Started</title>
-  <p>
+  <h3>
     <strong class="text-[#334155]">@sierra-95/svelte-ui</strong> is a component library built for the Svelte ecosystem.  
     It offers expressive, accessible, and flexible components to accelerate your Svelte projects.
-  </p>
-  <p>
+  </h3>
+  <h3>
     To get started, install the package via npm:
-  </p>
+  </h3>
   <RenderCode
     lang="bash"
     code={`
     npm i @sierra-95/svelte-ui    
   `}/>
-  
-  <p>Add this in your <strong>app.html</strong> or <strong>svelte:head</strong></p>
+
+  <h3>Add this in your <strong>app.html</strong> or <strong>svelte:head</strong></h3>
   <RenderCode
       lang="html"
       code={`
@@ -29,7 +29,7 @@
       ></script>
   `}/>
   <h2>Usage Example</h2>
-  <p>After installation, import any component you want to use. For example, to add a button:</p>
+  <h3>After installation, import any component you want to use. For example, to add a button:</h3>
   <RenderCode
     lang="svelte"
     code={`
