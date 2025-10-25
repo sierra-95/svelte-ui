@@ -1,53 +1,66 @@
 <script lang="ts">
-  import { CircularProgress } from '$lib/index.js';
-  
-  export let variant: 'contained' | 'outlined' | '' = '';
-  export let color = 'primary';
-  export let title = "";
-  export let pill = false;
-  export let spinner = 20;
-  export let thickness = 2;
-  export let disabled = false;
-  export let isLoading = false;
-  export let onClick = () => {};
-  export let style = '';
-  export let submit = false;
-  export let html2canvas_ignore = "false";
+	// @enable runes
+	import { CircularProgress } from '$lib/index.js';
 
-  $: buttonClasses = (() => {
-    let classes = 'base-btn';
-    //Variant
-    if(variant) classes += ` btn-${variant}`;
-    //Color
-    if (variant === 'contained') {
-      classes += ` btn-contained-${color}`;
-    } else if (variant === 'outlined') {
-      classes += ` btn-outlined-${color}`;
-    }
-    if (style) classes += ` ${style}`;
-    return classes;
-  })();
+  type _variant = 'contained' | 'outlined';
+  type _color = 'primary' | 'warning' | 'error';
+  type _buttonType = 'button' | 'submit' | 'reset';
 
+	const {
+    children,
+		variant = 'contained' as _variant,
+		color = 'primary' as _color,
+    type = 'button' as _buttonType,
+		title = '',
+		pill = false,
+		spinner = 20,
+		thickness = 2,
+		disabled = false,
+		isLoading = false,
+		html2canvas_ignore = 'false',
+		style = '',
+		...rest
+	} = $props();
+
+	const buttonClasses = $derived(() => {
+		let classes = 'base-btn';
+
+		if (variant) classes += ` btn-${variant}`;
+
+		if (variant === 'contained') {
+			classes += ` btn-contained-${color}`;
+		} else if (variant === 'outlined') {
+			classes += ` btn-outlined-${color}`;
+		}
+
+		if (style) classes += ` ${style}`;
+
+		return classes;
+	});
 </script>
 
 <style>
-  @import './button.css';
+	@import './button.css';
 </style>
 
 <button
-  data-html2canvas-ignore={html2canvas_ignore}
-  class:pill={pill}
-  class:disabled={isLoading || disabled}
-  class="{buttonClasses}"
-  on:click={onClick}
-  disabled={isLoading || disabled}
-  type={submit ? 'submit' : 'button'}
-  title={title}  
+	{...rest}
+	data-html2canvas-ignore={html2canvas_ignore}
+	class:pill={pill}
+	class:disabled={isLoading || disabled}
+	class={buttonClasses()}
+	disabled={isLoading || disabled}
+	type={type}
+	title={title}
+  onclick={(e: MouseEvent) => {
+    rest.onclick?.(e);
+  }}
 >
-  {#if isLoading}
-    <div id='btn-loading'><CircularProgress size={spinner} thickness={thickness} /></div>
-  {/if}
-  {#if !isLoading}
-    <slot></slot>
-  {/if}
+	{#if isLoading}
+		<div id="btn-loading">
+			<CircularProgress size={spinner} thickness={thickness} />
+		</div>
+	{:else}
+		{@render children?.()}
+	{/if}
 </button>
