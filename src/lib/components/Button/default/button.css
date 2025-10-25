@@ -5,6 +5,10 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   min-width: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
 }
 .base-btn:hover{
   opacity: 0.8;
@@ -16,7 +20,6 @@
   border-width: 2px;
   border-style: solid;
 }
-
 
 /********Color****************************/
 .btn-contained-primary {
@@ -46,12 +49,7 @@
   opacity: 0.6;
   cursor: not-allowed;
 }
-/****Circular progress******/
-#btn-loading{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/****Pill Button******/
 .base-btn.pill{
   border-radius: 50%;
   min-width: unset;

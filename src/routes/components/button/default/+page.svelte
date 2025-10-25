@@ -37,17 +37,16 @@
 {/each}
 </div>
 <div class="flex gap-4">
-	<Button variant="contained"  isLoading title="Loading"></Button>
+	<Button variant="contained"  isLoading title="Loading">Button</Button>
 	<Button variant='contained' disabled title="Disabled">Button</Button>
 	<Button pill variant='outlined' title="Pill"><i class="fa fa-chevron-right"></i></Button>
 </div>
 <div class='flex flex-col gap-2'>
 	<h2 class='mt-4 text-xl'>You may also customize it using Tailwind via the <strong>style</strong> prop.</h2>
-	<Button title="Custom Button" style="w-[200px] bg-black" isLoading spinner={50} thickness={10}></Button>
 	<RenderCode
 		lang="svelte"
 		code={`
-		<Button isLoading spinner={50} thickness={10} style="w-[100px] bg-black">Button</Button>
+		<Button isLoading spinner={40} thickness={5} style="w-[100px]">Button</Button>
 	`}/>
 </div>
 <div class='overflow-x-auto'><ButtonDefaultTable/></div>

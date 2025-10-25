@@ -52,15 +52,12 @@
 	disabled={isLoading || disabled}
 	type={type}
 	title={title}
-  onclick={(e: MouseEvent) => {
-    rest.onclick?.(e);
-  }}
+	onclick={(e: MouseEvent) => {
+		rest.onclick?.(e);
+	}}
 >
+	{@render children?.()}
 	{#if isLoading}
-		<div id="btn-loading">
-			<CircularProgress size={spinner} thickness={thickness} />
-		</div>
-	{:else}
-		{@render children?.()}
+		<CircularProgress size={spinner} thickness={thickness} />
 	{/if}
 </button>
