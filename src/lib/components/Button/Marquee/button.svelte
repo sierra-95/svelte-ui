@@ -2,12 +2,14 @@
   import { onMount } from 'svelte';
   import './button.css';
 
-  export let text = "Hover me";
-  export let link = "#";
-  export let bg = "#D8C4A1";
-  export let color = "#4B5563";
+  const {
+    text = "Hover me",
+    link = "#",
+    bg = "#D8C4A1",
+    color = "#4B5563"
+  } = $props();
 
-  let scrolling = false;
+  let scrolling = $state(false);
 
   let container: HTMLDivElement;
   let marquee: HTMLAnchorElement;
@@ -31,8 +33,8 @@
   role='none'
   bind:this={container}
   class="marquee-container"
-  on:mouseenter={() => scrolling = true}
-  on:mouseleave={() => scrolling = false}
+  onmouseenter={() => scrolling = true}
+  onmouseleave={() => scrolling = false}
   style="--border-color: {bg}; --text-color: {color}"
 >
   <a href={link} class="marquee {scrolling ? 'scrolling' : ''}" bind:this={marquee}>

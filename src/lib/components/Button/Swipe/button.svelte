@@ -7,8 +7,10 @@
     @import url(./button.css);
 </style>
 <script>
-    export let link = "#";
-    export let text = "Button";
-    export let bg = "#D8C4A1";
-    export let color = "#4B5563";
+    const {
+        link = "#",
+        text = "Button",
+        bg = "#D8C4A1",
+        color = "#4B5563"
+    } = $props();
 </script>

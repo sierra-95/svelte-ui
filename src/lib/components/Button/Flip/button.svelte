@@ -9,10 +9,12 @@
     @import url(./button.css);
 </style>
 <script>
-    export let link = "#";
-    export let back = "back";
-    export let front = "front";
-    export let bgFront = "#adadaf";
-    export let bgBack = "#f4e5d4";
-    export let color = "#323237";
+    const {
+        link = "#",
+        back = "back",
+        front = "front",
+        bgFront = "#adadaf",
+        bgBack = "#f4e5d4",
+        color = "#323237",
+    } = $props();
 </script>
