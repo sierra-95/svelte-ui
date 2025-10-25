@@ -1,15 +1,11 @@
 <script>
   import { modalStore, Button} from '$lib/index.js';
   import { onMount } from 'svelte';
-
-  let modal;
-
   $: modalData = $modalStore;
 
   function close() {
     modalStore.update(m => ({ ...m, open: false }));
   }
-
   /**
 	 * @param {{ key: string; }} e
 	 */
@@ -29,7 +25,7 @@
       <h2 class="text-xl font-semibold mb-1 text-left">{modalData.title}</h2>
       <div class="mb-6 text-left">{modalData.content}</div>
       <div class="flex justify-start gap-10">
-        <Button onClick={() => { modalData.onConfirm?.(); close();}}>
+        <Button onclick={() => { modalData.onConfirm?.(); close();}}>
         {modalData.confirmText}
         </Button>
         {#if modalData.cancelText}

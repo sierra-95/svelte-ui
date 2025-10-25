@@ -1,7 +1,7 @@
 <script>
 	import '../app.css';
     import { onMount } from 'svelte';
-	import {LinearProgress, isLoading, isMobile} from '$lib/index.js'
+	import {LinearProgress, isLoading, isMobile, Modal} from '$lib/index.js'
 	import {Header,Menu, Layout} from '../components/index.js';
 	
 	let { children } = $props();
@@ -35,6 +35,7 @@
 	};
 </script>
 
+<Modal />
 <Header toggleMenu={toggleMenu}/>
 {#if $isLoading}<LinearProgress />{/if}
 <div class="flex w-full h-[calc(100vh-70px)]">
