@@ -1,9 +1,8 @@
 <script>
-    /**
-	 * @type {{ label?: string, path?: string, icon?: string, subitems?: any[] } | null}
-	 */
-    export let hovered;
-    export let isMobile;
+    let { 
+        hovered,
+        isMobile
+    } = $props();
 </script>
 {#if !isMobile}
     <div 
@@ -11,7 +10,7 @@
         class='z-50 absolute left-0 w-50 h-full bg-white border-r-1 border-gray-300
         p-4 flex flex-col gap-2 underline transition-transform duration-500 transform'
         class:-translate-x-50={!hovered}
-        on:mouseleave={() => hovered = null}
+        onmouseleave={() => hovered = null}
     >
         {#if hovered?.subitems?.length}
             {#each hovered.subitems as sub}

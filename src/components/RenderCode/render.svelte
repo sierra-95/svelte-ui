@@ -4,12 +4,14 @@
   import { tick } from 'svelte';
   import './shiki.css';
 
-  export let code = '';
-  export let lang = 'javascript';
-  export let theme = 'tokyo-night';
+  const {
+    code = '',
+    lang = 'javascript',
+    theme = 'tokyo-night'
+  } = $props();
 
-  let html = 'Loading...';
-  let copied = false;
+  let html = $state('Loading...');
+  let copied = $state(false);
 
   onMount(async () => {
     const highlighter = await createHighlighter({
@@ -33,7 +35,7 @@
 <main class="max-w-xl">
   <div class="bg-[#f8fafc] w-full flex justify-between items-center p-2 rounded-t-xl">
     <span class="text-[#475569]">{lang}</span>
-    <button on:click={copyCode} class="cursor-pointer">
+    <button onclick={copyCode} class="cursor-pointer">
       {copied ? 'Copied' : 'Copy'}
     </button>
   </div>

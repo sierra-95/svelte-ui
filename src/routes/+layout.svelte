@@ -75,7 +75,7 @@
 	</div>
 	<!-- Content -->
 	<div class="relative transition-all duration-300 overflow-y-auto" style={`width: ${isMobile ? '100%' : isMenuOpen ? 'calc(100vw - 300px)' : 'calc(100vw - 70px)'};`}>
-		<Flyout {hovered} {isMobile}/>
+		<Flyout hovered={hovered} isMobile={isMobile}/>
 		<Layout>{@render children()}</Layout>
 	</div>
 </div>

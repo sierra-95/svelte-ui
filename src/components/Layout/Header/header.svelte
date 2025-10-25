@@ -1,12 +1,12 @@
-<script>
-  export let toggleMenu = () => {};
+<script lang="ts">
+   const { toggleMenu = (() => {}) as (e: MouseEvent) => void } = $props();
 </script>
 <style>
   @import './header.css';
 </style>
 <header class="w-full flex justify-between h-[70px] border-b-1 border-gray-300">
   <div class="flex items-center">
-    <div role="none" class="menu-button" on:click={toggleMenu}>
+    <div role="none" class="menu-button" onclick={toggleMenu}>
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>

@@ -1,12 +1,7 @@
 <script>
   import { sections } from "./sections.js";
-  export let label;
-  /**
-   * @typedef {{ path: string, label: string, icon?: string, subitems?: { path: string, label: string }[] }} MenuItem
-  */
-
-  /** @type {MenuItem | undefined} */
-
+  const {label} = $props();
+  
   const menu = sections
     .find(s => s.label === 'Components')
     ?.items.find(item => item.label === `${label}`);
