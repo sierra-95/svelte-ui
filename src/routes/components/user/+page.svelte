@@ -1,6 +1,7 @@
 <script>
     import {UserMenu} from '$lib/index.js'
 	import {RenderCode} from '../../../components/index.js';
+    import Render from '../../../components/RenderCode/render.svelte';
     let open = $state(true)
 
     let user = {
@@ -19,7 +20,17 @@
     target="_blank"
     href="https://github.com/sierra-95/svelte-ui/blob/main/src/lib/components/UserMenu/profile.svelte">GitHub code</a>.
 </h2>
-<UserMenu bind:open />
+<h2>Add this in your <strong>index/app.html</strong> or <strong>svelte:head</strong></h2>
+<Render
+    lang="html"
+    code={`
+    <\script
+		src="https://kit.fontawesome.com/b63be7ac2d.js"
+		crossorigin="anonymous"
+	></script>
+
+`}/>
+<UserMenu bind:open user={user} />
 {#if open}
     <div class="h-[250px]"></div>
 {/if}
@@ -52,6 +63,8 @@
 	    <UserMenu
             user={user}
             iconBg='#10b981'
+            parentIconSize='30px'
+            childIconSize='20px'
             absolute='right' 
             onProfile={handleProfile} 
             onLogout={handleLogout}

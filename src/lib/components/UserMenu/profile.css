@@ -1,8 +1,8 @@
-  .user-menu {
+  #user-menu {
     position: relative;
     width: 30px;
   }
-  .menu-paper {
+  #user-menu .menu-paper {
     position: absolute;
     top: 70px;
     min-width: 300px;
