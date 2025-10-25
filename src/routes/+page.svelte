@@ -1,12 +1,8 @@
 <script lang="ts">
   import {RenderCode} from '../components/index.js'; 
-
 </script>
 
 <style>
-  p,h2{
-    margin: 1.25rem 0;
-  }
 </style>
 <main>
   <title>Getting Started</title>
@@ -21,6 +17,16 @@
     lang="bash"
     code={`
     npm i @sierra-95/svelte-ui    
+  `}/>
+  
+  <p>Add this in your <strong>app.html</strong> or <strong>svelte:head</strong></p>
+  <RenderCode
+      lang="html"
+      code={`
+      <\script
+        src="https://kit.fontawesome.com/b63be7ac2d.js"
+        crossorigin="anonymous"
+      ></script>
   `}/>
   <h2>Usage Example</h2>
   <p>After installation, import any component you want to use. For example, to add a button:</p>

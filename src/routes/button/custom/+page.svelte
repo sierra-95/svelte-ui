@@ -27,6 +27,7 @@
     <\/script>
 
     <ButtonMarquee text='Sign In' link='/auth' bg='red' color = 'blue'  />
+
 `}/>
 <div class="wrap">
     <h3>1. Swipe Button</h3>

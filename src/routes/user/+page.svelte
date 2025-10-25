@@ -19,16 +19,6 @@
     target="_blank"
     href="https://github.com/sierra-95/svelte-ui/blob/main/src/lib/components/UserMenu/profile.svelte">GitHub code</a>.
 </h3>
-<h3>Add this in your <strong>index/app.html</strong> or <strong>svelte:head</strong></h3>
-<RenderCode
-    lang="html"
-    code={`
-    <\script
-		src="https://kit.fontawesome.com/b63be7ac2d.js"
-		crossorigin="anonymous"
-	></script>
-
-`}/>
 <UserMenu bind:open user={user} />
 {#if open}
     <div class="h-[250px]"></div>
@@ -67,4 +57,5 @@
             onLogout={handleLogout}
         />
     </div>
+    
 `}/>
