@@ -11,10 +11,9 @@ export {default as ButtonSwipe } from './components/Button/Swipe/button.svelte';
 
 //others
 export {default as  SiteUnderMaintenance} from './components/site-under-maintenance/site-under-maintenance.svelte'
-export {default as Modal} from './components/modal/modal.svelte';
 export {default as UserMenu} from './components/UserMenu/profile.svelte';
 
 
 //#######################STORES########################
 export { isLoading } from './stores/isloading.js';
-export {modalStore} from './stores/modal.js';
+export {isMobile} from './stores/ismobile.js';
