@@ -9,10 +9,22 @@
   </thead>
   <tbody class="text-gray-800">
     <tr>
-      <td class="p-3 border font-mono">variant</td>
-      <td class="p-3 border font-mono">string (contained, outlined)</td>
+      <td class="p-3 border font-mono">title</td>
+      <td class="p-3 border font-mono">string</td>
+      <td class="p-3 border font-mono">''</td>
+      <td class="p-3 border">The button label content.</td>
+    </tr>
+    <tr>
+      <td class="p-3 border font-mono">type</td>
+      <td class="p-3 border font-mono">string (button, submit, reset)</td>
+      <td class="p-3 border font-mono">'button'</td>
+      <td class="p-3 border"></td>
+    </tr>
+    <tr>
+      <td class="p-3 border font-mono">onclick=&#123;() =&gt; your_function()&#125;</td>
+      <td class="p-3 border font-mono">function(s)</td>
       <td class="p-3 border font-mono"></td>
-      <td class="p-3 border">Defines the button style variant. If used, it <strong>overrides</strong> any Tailwind styles passed via the <strong>style</strong> prop.</td>
+      <td class="p-3 border">Function or functions triggered when the button is clicked.</td>
     </tr>
     <tr>
       <td class="p-3 border font-mono">color</td>
@@ -21,10 +33,10 @@
       <td class="p-3 border">Sets the color scheme, used with <strong>variant</strong> to determine visual appearance.</td>
     </tr>
     <tr>
-      <td class="p-3 border font-mono">title</td>
-      <td class="p-3 border font-mono">string</td>
-      <td class="p-3 border font-mono">''</td>
-      <td class="p-3 border">The button label content.</td>
+      <td class="p-3 border font-mono">variant</td>
+      <td class="p-3 border font-mono">string (contained, outlined)</td>
+      <td class="p-3 border font-mono">'contained'</td>
+      <td class="p-3 border">Defines the button style variant. If used, it <strong>overrides</strong> any Tailwind styles passed via the <strong>style</strong> prop.</td>
     </tr>
     <tr>
       <td class="p-3 border font-mono">pill</td>
@@ -48,7 +60,7 @@
       <td class="p-3 border font-mono">style</td>
       <td class="p-3 border font-mono">string (Tailwind only)</td>
       <td class="p-3 border font-mono">""</td>
-      <td class="p-3 border">Tailwind utility classes for custom styling. <strong>Ignored</strong> if <strong>variant</strong> is set.</td>
+      <td class="p-3 border">Tailwind utility classes for custom styling. <strong>Priority</strong> is given to <strong>variant</strong></td>
     </tr>
     <tr>
       <td class="p-3 border font-mono">disabled</td>
@@ -61,18 +73,6 @@
       <td class="p-3 border font-mono">boolean</td>
       <td class="p-3 border font-mono">false</td>
       <td class="p-3 border">Displays a spinner. Automatically disables the button while loading.</td>
-    </tr>
-    <tr>
-      <td class="p-3 border font-mono">onClick=&#123;() =&gt; your_function()&#125;</td>
-      <td class="p-3 border font-mono">function(s)</td>
-      <td class="p-3 border font-mono"></td>
-      <td class="p-3 border">Function or functions triggered when the button is clicked.</td>
-    </tr>
-    <tr>
-      <td class="p-3 border font-mono">submit</td>
-      <td class="p-3 border font-mono">boolean</td>
-      <td class="p-3 border font-mono">false</td>
-      <td class="p-3 border">If true, sets <strong>type="submit"</strong> (useful in forms). Defaults to <strong>type="button"</strong>.</td>
     </tr>
     <tr>
       <td class="p-3 border font-mono">html2canvas_ignore</td>
