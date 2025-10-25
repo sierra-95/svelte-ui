@@ -1,7 +1,7 @@
 import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
 
-export const isMobile = writable(false);
+export const isMobile = writable(true);
 
 if (browser) {
     const updateIsMobile = () => {

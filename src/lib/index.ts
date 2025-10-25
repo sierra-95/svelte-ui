@@ -15,5 +15,5 @@ export {default as UserMenu} from './components/UserMenu/profile.svelte';
 
 
 //#######################STORES########################
-export { isLoading } from './stores/isloading.js';
+export { isLoading, isLoggedIn } from './stores/general.js';
 export {isMobile} from './stores/ismobile.js';
