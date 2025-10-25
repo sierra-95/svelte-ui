@@ -8,13 +8,16 @@
 	import {Header,Menu, Layout, Flyout} from '../components/index.js';
 	
 	let isMenuOpen = $state(false);
-
 	/**
 	 * @type {{ label?: string, path?: string, icon?: string, subitems?: any[] } | null}
 	 */
 	let hovered = $state(null);
+	$effect(() => {
+		if ($isMobile) isMenuOpen = false;
+	});
 
 	onMount(() => {
+		if($isMobile) return;
 		if (typeof localStorage !== 'undefined') {
 			const stored = localStorage.getItem('isMenuOpen');
 			if (stored === null) {
