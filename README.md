@@ -23,7 +23,7 @@ For example, to add a button:
   import { Button } from '@sierra-95/svelte-ui';
 </script>
 
-<Button onClick={() => alert('Button clicked!')}>
+<Button onclick={() => alert('Button clicked!')}>
   Click Me
 </Button>
 ```
