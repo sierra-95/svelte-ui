@@ -1,0 +1,38 @@
+#dispatch{
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 300px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: 6px solid var(--retval);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+#dispatch div:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    color: var(--retval);
+    padding: 5px;
+}
+#dispatch div:nth-child(1) div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#dispatch div:nth-child(2){
+    padding: 5px;
+    padding-bottom: 10px;
+}
+#dispatch p {
+    max-width: 250px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+#dispatch i.fa-times{
+    color: black;
+    cursor: pointer;
+    padding-right: 20px;
+}

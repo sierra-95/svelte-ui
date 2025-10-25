@@ -1,13 +1,21 @@
 <script>
     import { onMount, onDestroy } from 'svelte';
-    import {setDispatchMessage,clearDispatchMessage} from '$lib/index.js'
+    import {setDispatchMessage,clearDispatchMessage, Button} from '$lib/index.js'
     import {RenderCode, DispatchTable} from '../../components/index.js';
     onMount(() => {
-        setDispatchMessage('success', 'Dispatch Triggered', 6000, true);
+        setDispatchMessage(
+            'error', 
+            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', 
+            6000, 
+            true
+        );
     });
     onDestroy(() => {
         clearDispatchMessage();
     });
+    function triggerDispatch(){
+        setDispatchMessage('success', 'Dispatch Triggered');
+    }
 </script>
 
 <title>Dispatch</title>
@@ -39,6 +47,7 @@
 	<Button onclick={triggerDispatch}>Click here</Button>
 
 `}/>
+<Button onclick={triggerDispatch}>Click here</Button>
 
 <h2>Persistent message dispatch</h2>
 <RenderCode
@@ -48,9 +57,12 @@
         import { onMount, onDestroy } from 'svelte';
 		import {setDispatchMessage,clearDispatchMessage} from '$lib/index.js'
 
-        onMount(() => {
-            setDispatchMessage('success', 'Dispatch Triggered', 6000, true);
-        });
+        setDispatchMessage(
+            'success', 
+            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', 
+            6000, 
+            true
+        );
         onDestroy(() => {
             clearDispatchMessage();
         });

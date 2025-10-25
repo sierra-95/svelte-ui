@@ -32,7 +32,7 @@
     setTimeout(() => copied = false, 2000);
   }
 </script>
-<main class="max-w-xl">
+<main>
   <div class="bg-[#f8fafc] w-full flex justify-between items-center p-2 rounded-t-xl">
     <span class="text-[#475569]">{lang}</span>
     <button onclick={copyCode} class="cursor-pointer">
