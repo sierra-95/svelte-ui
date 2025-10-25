@@ -18,7 +18,7 @@
 <title>Modal</title>
 <h1 class="font-bold text-2xl">Alert Modal</h1>
 <Button onclick={triggerModal}>Click here</Button>
-<h2>Place this anywhere in your app</h2>
+<h3>Place this anywhere in your app</h3>
 <RenderCode
 	lang="svelte"
 	code={`
@@ -29,7 +29,7 @@
 	<Modal />
 
 `}/>
-<h2>Trigger the Modal. Note that <strong>onCancel()</strong> is optional</h2>
+<h3>Trigger the Modal. Note that <strong>onCancel()</strong> is optional</h3>
 <RenderCode
 	lang="svelte"
 	code={`

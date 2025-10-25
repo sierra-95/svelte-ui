@@ -42,7 +42,7 @@
 	<Button pill variant='outlined' title="Pill"><i class="fa fa-chevron-right"></i></Button>
 </div>
 <div class='flex flex-col gap-2'>
-	<h2 class='mt-4 text-xl'>You may also customize it using Tailwind via the <strong>style</strong> prop.</h2>
+	<h3>You may also customize it using Tailwind via the <strong>style</strong> prop.</h3>
 	<RenderCode
 		lang="svelte"
 		code={`

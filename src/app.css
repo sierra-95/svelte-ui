@@ -8,3 +8,12 @@
 .div2{
     border: 1px solid red;
 }
+h1{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+h2{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #334155;
+}

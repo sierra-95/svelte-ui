@@ -12,8 +12,8 @@
 </style>
 
 <title>Custom Buttons</title>
-<h1 class="font-bold text-2xl">Custom Buttons</h1>
-<h2>These buttons are not built to be as flexible compared to default buttons.</h2>
+<h1>Custom Buttons</h1>
+<h3>These buttons are not built to be as flexible compared to default buttons.</h3>
 <ol class="list-decimal pl-5">
     <li>They don’t support <code>on:click()</code> or aliases, since they are built with <code>&lt;a&gt;</code> tags.</li>
     <li>They are designed to be used as-is, with minimal customization options.</li>
@@ -29,15 +29,15 @@
     <ButtonMarquee text='Sign In' link='/auth' bg='red' color = 'blue'  />
 `}/>
 <div class="wrap">
-    <h2>1. Swipe Button</h2>
+    <h3>1. Swipe Button</h3>
     <ButtonSwipe />
 </div>
 <div class="wrap">
-    <h2>2. Marquee Button</h2>
+    <h3>2. Marquee Button</h3>
     <ButtonMarquee/>
 </div>
 <div class="wrap">
-    <h2>3. Flip Button</h2>
+    <h3>3. Flip Button</h3>
     <ButtonFlip />
 </div>
 <ButtonCustomTable/>

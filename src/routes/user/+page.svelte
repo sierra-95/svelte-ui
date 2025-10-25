@@ -11,15 +11,15 @@
 
 <title>User Menu</title>
 
-<h1 class="font-bold text-2xl">User Menu</h1>
-<h2>
+<h1>User Menu</h1>
+<h3>
   This menu is built to be used in portals as a developer's quick tool.
   For further customization, refer to the
   <a class="text-blue-500"
     target="_blank"
     href="https://github.com/sierra-95/svelte-ui/blob/main/src/lib/components/UserMenu/profile.svelte">GitHub code</a>.
-</h2>
-<h2>Add this in your <strong>index/app.html</strong> or <strong>svelte:head</strong></h2>
+</h3>
+<h3>Add this in your <strong>index/app.html</strong> or <strong>svelte:head</strong></h3>
 <RenderCode
     lang="html"
     code={`

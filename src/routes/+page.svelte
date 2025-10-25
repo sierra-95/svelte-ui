@@ -22,7 +22,7 @@
     code={`
     npm i @sierra-95/svelte-ui    
   `}/>
-  <h2 class="text-[#334155]">Usage Example</h2>
+  <h2>Usage Example</h2>
   <p>After installation, import any component you want to use. For example, to add a button:</p>
   <RenderCode
     lang="svelte"

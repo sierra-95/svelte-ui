@@ -19,7 +19,7 @@
 	{#each sections as section, i}
 		{#if section.label}
 			<div class="w-5/6">
-				<h2 class:hidden={!isMenuOpen} class="text-dk-blue text-sm">{section.label}</h2>
+				<h3 class:hidden={!isMenuOpen} class="text-dk-blue text-sm">{section.label}</h3>
 				<hr class="text-[#D1D5DB]"/>
 			</div>
 		{/if}
@@ -34,7 +34,7 @@
 
 			>
 				<i class={item.icon} style="font-size: 20px; color: rgb(0, 43, 103)"></i>
-				<h2 class:hidden={!isMenuOpen}>{item.label}</h2>
+				<h3 class:hidden={!isMenuOpen}>{item.label}</h3>
 			</a>
 		{/each}
 	{/each}

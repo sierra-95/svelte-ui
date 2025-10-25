@@ -4,7 +4,8 @@
 </script>
 
 <title>Progress</title>
-<h1 class="font-bold text-2xl">Circular Progress</h1>
+<h1>Progress</h1>
+<h2 class="font-bold text-2xl">Circular Progress</h2>
 <CircularProgress/>
 <RenderCode
 	lang="svelte"
@@ -15,7 +16,7 @@
 
 	<CircularProgress />
 `}/>
-<h1 class="font-bold text-2xl">Linear Progress</h1>
+<h2 class="font-bold text-2xl">Linear Progress</h2>
 <LinearProgress/>
 <RenderCode
 	lang="svelte"
