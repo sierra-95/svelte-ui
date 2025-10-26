@@ -1,6 +1,6 @@
 <script>
     import {modalStore,Button} from '$lib/index.js'
-    import {RenderCode} from '../../components/index.js';
+    import {RenderCode, ModalTable} from '../../components/index.js';
 
     function triggerModal() {
         modalStore.set({
@@ -52,3 +52,4 @@
 
 `}/>
 <Button onclick={triggerModal}>Click here</Button>
+<ModalTable />

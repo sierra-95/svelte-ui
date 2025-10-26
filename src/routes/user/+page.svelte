@@ -1,6 +1,6 @@
 <script>
     import {UserMenu} from '$lib/index.js'
-	import {RenderCode} from '../../components/index.js';
+	import {RenderCode, UserMenuTable} from '../../components/index.js';
     let open = $state(true)
 
     let user = {
@@ -59,3 +59,4 @@
     </div>
     
 `}/>
+<UserMenuTable />

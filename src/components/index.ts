@@ -5,4 +5,6 @@ export { default as Layout } from './Layout/layout.svelte';
 export { default as ButtonDefaultTable } from './Tables/buttonDefault.svelte';
 export { default as ButtonCustomTable } from './Tables/buttonCustom.svelte';
 export { default as DispatchTable } from './Tables/dispatch.svelte';
+export {default as ModalTable} from './Tables/modal.svelte';
+export { default as UserMenuTable } from './Tables/userMenu.svelte';
 export { sections } from './Layout/Menu/sections.js';
