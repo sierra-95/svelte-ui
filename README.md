@@ -9,23 +9,31 @@ It offers expressive, accessible, and flexible components to accelerate your Sve
 Install via npm:
 
 ```bash
-npm i @sierra-95/svelte-ui
+
+  npm i @sierra-95/svelte-ui
+
 ```
-
-
+## Scripts
+Add this in your app.html or svelte:head
+```html
+  <script
+    src="https://kit.fontawesome.com/b63be7ac2d.js"
+    crossorigin="anonymous"
+  ></script>
+```
 ## Usage Example
 
 After installation, import and use any component you need.
 For example, to add a button:
 
-```svelte
-<script>
-  import { Button } from '@sierra-95/svelte-ui';
-</script>
+```html
+  <script>
+    import { Button } from '@sierra-95/svelte-ui';
+  </script>
 
-<Button onclick={() => alert('Button clicked!')}>
-  Click Me
-</Button>
+  <Button onclick={() => alert('Button clicked!')}>
+    Click Me
+  </Button>
 ```
 
 ## Documentation
