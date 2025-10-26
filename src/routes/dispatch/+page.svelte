@@ -37,7 +37,7 @@
 	lang="svelte"
 	code={`
 	<\script>
-		import {setDispatchMessage, Button} from '$lib/index.js'
+		import {setDispatchMessage, Button} from '@sierra-95/svelte-ui';
 
         function triggerDispatch(){
             setDispatchMessage('success', 'Dispatch Triggered');
@@ -55,7 +55,7 @@
 	code={`
 	<\script>
         import { onMount, onDestroy } from 'svelte';
-		import {setDispatchMessage,clearDispatchMessage} from '$lib/index.js'
+		import {setDispatchMessage,clearDispatchMessage} from '@sierra-95/svelte-ui';
 
         setDispatchMessage(
             'success', 
