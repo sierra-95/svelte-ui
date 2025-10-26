@@ -10,6 +10,7 @@ export const routes = {
     user: `/user`,
     modal: `/modal`,
     dispatch: `/dispatch`,
+    maintenance: `/maintenance`,
 };
 
 export const sections = [
@@ -66,6 +67,11 @@ export const sections = [
                 path: routes.modal, 
                 label: 'Modal',
                 icon: 'fa fa-exclamation-triangle' ,
+            },
+            { 
+                path: routes.maintenance, 
+                label: 'Site Under Maintenance',
+                icon: 'fa fa-firefox' ,
             }
         ]
     },
