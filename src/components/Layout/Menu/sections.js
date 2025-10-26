@@ -11,6 +11,7 @@ export const routes = {
     modal: `/modal`,
     dispatch: `/dispatch`,
     maintenance: `/maintenance`,
+    stores: `/stores`,
 };
 
 export const sections = [
@@ -73,6 +74,16 @@ export const sections = [
                 label: 'Site Under Maintenance',
                 icon: 'fa fa-firefox' ,
             }
+        ]
+    },
+    {
+        label: 'Stores',
+        items: [
+            { 
+                path: routes.stores, 
+                label: 'Stores',
+                icon: 'fa fa-store' ,
+            },
         ]
     },
 ];
