@@ -1,4 +1,5 @@
 <script>
+  import './modal.css';
   import { modalStore, Button} from '$lib/index.js';
   import { onMount } from 'svelte';
   $: modalData = $modalStore;
@@ -18,18 +19,17 @@
     return () => window.removeEventListener('keydown', handleKeydown);
   });
 </script>
-
 {#if modalData.open}
-  <div class="fixed inset-0 z-10 flex items-center justify-center bg-[rgba(0,0,0,0.3)] p-2">
-    <div class="bg-white p-6 rounded-sm w-full max-w-lg shadow-lg">
-      <h2 class="text-xl font-semibold mb-1 text-left">{modalData.title}</h2>
-      <div class="mb-6 text-left">{modalData.content}</div>
-      <div class="flex justify-start gap-10">
+  <div id="modal" role="none" on:click={() => close()}>
+    <div class="modal-container">
+      <h2>{modalData.title}</h2>
+      <h3>{modalData.content}</h3>
+      <div>
         <Button onclick={() => { modalData.onConfirm?.(); close();}}>
         {modalData.confirmText}
         </Button>
         {#if modalData.cancelText}
-            <button on:click={() => {modalData.onCancel?.();close();}} class='cursor-pointer'
+            <button on:click={() => {modalData.onCancel?.();close();}}
             >{modalData.cancelText}
             </button>
         {/if}
